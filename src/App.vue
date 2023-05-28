@@ -1,5 +1,4 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import MySwitch from './components/MySwitch.vue'
 
 export default{
@@ -19,7 +18,6 @@ export default{
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="Just a Sample Program" />
       <MySwitch :switch-value="switchValue" @switchValueChanged="switchValue = !switchValue"></MySwitch>
     </div>
   </header>
