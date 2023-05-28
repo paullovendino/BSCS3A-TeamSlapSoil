@@ -1,10 +1,12 @@
 <script>
 import MySwitch from './components/MySwitch.vue'
+import Image from './components/Image.vue'
 
 export default{
   name: 'App',
   components: {
-    MySwitch
+    MySwitch,
+    Image
   },
   data (){
     return{
@@ -18,6 +20,7 @@ export default{
   <header>
     <div class="wrapper">
       <MySwitch :switch-value="switchValue" @switchValueChanged="switchValue = !switchValue"></MySwitch>
+      <Image :imageUrl="'https://www.positivethinking.tech/wp-content/uploads/2021/01/Logo-Vuejs.png'"></Image>
     </div>
   </header>
 </template>
