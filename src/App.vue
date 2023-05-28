@@ -4,7 +4,6 @@ import MySwitch from './components/MySwitch.vue'
 export default{
   name: 'App',
   components: {
-    HelloWorld,
     MySwitch
   },
   data (){
