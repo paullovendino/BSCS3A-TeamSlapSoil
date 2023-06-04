@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button :class="[type, disabled ? 'disabled' : '']" :disabled="disabled" id="sizes">
+        <button :class="[size, type, disabled ? 'disabled' : '']" :disabled="disabled" id="sizes">
             <p>{{ text }}</p>
         </button>
     </div>
@@ -11,6 +11,7 @@
         name: 'btnSoil',
         props: {
             text: String,
+            size: String,
             disabled: {
                 type: Boolean,
                 default: false
@@ -23,6 +24,41 @@
 </script>
 
 <style scoped>
+    .xx-small{
+        font-size: xx-small;
+        width: 75px;
+        height: 30px
+    }
+
+    .x-small{
+        font-size: x-small;
+        width: 80px;
+        height: 30px
+    }
+    .medium{
+        font-size: medium;
+        width: 120px;
+        height: 50px
+    }
+
+    .large{
+        font-size: large;
+        width: 140px;
+        height: 60px
+    }
+
+    .x-large{
+        font-size: x-large;
+        width: 175px;
+        height: 75px
+    }
+
+    .xx-large{
+        font-size: xx-large;
+        width: 225px;
+        height: 95px
+    }
+
     button{
         background: #B08968;
         color: #E6CCB2;
