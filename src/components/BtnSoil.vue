@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button :class="[size, type, disabled ? 'disabled' : '']" :disabled="disabled" id="sizes">
+        <button :class="[size, type, disabled ? 'disabled' : '']" :disabled="disabled">
             <p>{{ text }}</p>
         </button>
     </div>
