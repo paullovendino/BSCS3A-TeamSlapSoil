@@ -89,20 +89,20 @@
     }
     
     .sidebar::-webkit-scrollbar{
-        width: 10px;
+        width: 5px;
     }
 
     .sidebar::-webkit-scrollbar-thumb{
-        background-color: #FBBA72;
+        background-color: #b08968;
     }
 
     .sidebar::-webkit-scrollbar-track{
-        background-color: #8F250C;
+        background-color: #b08968;
     }
     
     .navbar{
         display: flex;
-        background: #8F250C;
+        background: #b08968;
         width: 100%;
         height: 80px;
         align-items: center;
@@ -113,7 +113,7 @@
         position: fixed;
         width: 250px;
         height: 100%;
-        background: #8F250C;
+        background: #ede0d4;
         overflow-y: scroll;
         transition: all .5s ease;
         padding-bottom: 60px;
@@ -132,10 +132,10 @@
         padding-bottom: 20px;
         margin-left: 10px;
         font-size: 15px;
-        color: white;
+        color: black;
         box-sizing: border-box;
         border-top: 1px solid rgba(255, 255, 255, .1);
-        border-bottom: 1px solid black;
+        /* border-bottom: 1px solid black; */
         transition: .1s ease;
     }
 
@@ -146,11 +146,12 @@
     ul li:hover{
         padding-left: 15px;
         color: #FBBA72;
+        cursor: pointer;
     }
 
     ul li.active{
         padding-left: 15px;
-        background: #551102;
+        background: #ede0d4;
         color: #FBBA72;
     }
 
@@ -159,12 +160,12 @@
         color: white;
         text-align: center;
         line-height: 70px;
-        background: #8F250C;
+        background: #b08968;
         user-select: none;
     }
 
     .webTitle h3{
-        color: #FBBA72;
+        color: white;
         margin-right: 90px;
         font-size: 40px;
         font-weight: 700;
@@ -187,14 +188,14 @@
     }
 
     .menu-button h2{
-        color: #FBBA72;
+        color: white;
         font-weight: 800;
     }
     
     .line {
         width: 100%;
         height: 4px;
-        background-color: #FBBA72;
+        background-color: white;
     }
 
     #check{
@@ -204,14 +205,14 @@
     #show, #cancel{
         position: absolute;
         cursor: pointer;
-        background: #8F250C;
+        background: #b08968;
         border-radius: 3px;
     }
 
     #show{
         top: 25px;
         font-size: 35px;
-        color: #FBBA72;
+        color: #ede0d4;
         padding: 6px 12px;
         transition: all .4s;
     }
@@ -220,7 +221,7 @@
         z-index: 1000;
         left: -180px;
         top: 17px;
-        color: #FBBA72;
+        color: #ede0d4;
         padding: 4px 9px;
         transition: all .5s ease;
     }
