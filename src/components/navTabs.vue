@@ -8,7 +8,7 @@
     import { inject } from 'vue'
 
     export default {
-        name: 'Tabs',
+        name: 'navTabs',
         props: {
             'title': String,
         },
