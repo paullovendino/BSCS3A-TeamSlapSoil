@@ -8,18 +8,6 @@
   font-weight: normal;
 }
 
-.sidebar::-webkit-scrollbar{
-  width: 10px;
-}
-
-.sidebar::-webkit-scrollbar-thumb{
-  background-color: #FBBA72;
-}
-
-.sidebar::-webkit-scrollbar-track{
-  background-color: #8F250C;
-}
-
 body{
   font-family: 'Roboto', sans-serif;
 }
