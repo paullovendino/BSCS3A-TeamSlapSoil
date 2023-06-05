@@ -1,5 +1,6 @@
 <template>
   <TabbedNavigation webTitle="Slap Soil" sidebarTitle="Components">
+    <Tabs title="Home"></Tabs>
     <Tabs title="Component 1"></Tabs>
     <Tabs title="Component 2"></Tabs>
     <Tabs title="Component 3"></Tabs>
