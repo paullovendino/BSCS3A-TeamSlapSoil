@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Tabs from './components/tabs.vue'
+import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
 
 export default{
