@@ -83,9 +83,23 @@
     .contentChecked{
         margin-left: 250px;
     }
+    
     .checkedIconCancel{
         left: 180px !important;
     }
+    
+    .sidebar::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb{
+        background-color: #FBBA72;
+    }
+
+    .sidebar::-webkit-scrollbar-track{
+        background-color: #8F250C;
+    }
+    
     .navbar{
         display: flex;
         background: #8F250C;
@@ -94,6 +108,7 @@
         align-items: center;
         justify-content: space-between;
     }
+    
     .sidebar{
         position: fixed;
         width: 250px;
@@ -101,6 +116,7 @@
         background: #8F250C;
         overflow-y: scroll;
         transition: all .5s ease;
+        padding-bottom: 60px;
     }
 
     .sidebar ul{
@@ -153,6 +169,7 @@
         font-size: 40px;
         font-weight: 700;
     }
+    
     .menu-button {
         cursor: pointer;
         background: none;
