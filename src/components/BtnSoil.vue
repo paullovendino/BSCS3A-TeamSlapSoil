@@ -60,17 +60,21 @@
     }
 
     button{
-        background: #B08968;
-        color: #E6CCB2;
-        padding: 10px;
+        background: #e6ccb2;
+        color: black;
+        padding: 10px 20px;
         border: none;
         box-shadow: 2px 2px rgb(0, 0, 0, 0.5);
+        border-radius: 20px;
+        font-size: 20px;
+        transition: all .3s;
     }
     
     button:hover{
         background: #7F5539;
         color: #EDE0D4;
         box-shadow: 3px 3px rgb(0, 0, 0, 0.5);
+        cursor: pointer;
     }
 
     button:active{
