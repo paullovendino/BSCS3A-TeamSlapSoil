@@ -3,7 +3,6 @@
     <Tabs title="Home">
         <div class="container">
             <Greetings/>
-            <btnSoil text = "Start Browsing" />
         </div>
     </Tabs>
     <Tabs title="Component 1"></Tabs>
@@ -22,15 +21,14 @@
 import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
 import Greetings from './components/HomeGreeting.vue'
-import btnSoil from './components/BtnSoil.vue'
+
 
 export default{
   name: 'App',
   components: {
     Tabs,
     TabbedNavigation,
-    Greetings,
-    btnSoil,
+    Greetings
   },
   data (){
     return{
