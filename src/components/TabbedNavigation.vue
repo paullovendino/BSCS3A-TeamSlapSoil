@@ -104,7 +104,7 @@
         display: flex;
         background: #b08968;
         width: 100%;
-        height: 80px;
+        height: 75px;
         align-items: center;
         justify-content: space-between;
     }
@@ -112,11 +112,10 @@
     .sidebar{
         position: fixed;
         width: 250px;
-        height: 100%;
+        height: 90%;
         background: #ede0d4;
         overflow-y: scroll;
         transition: all .5s ease;
-        padding-bottom: 60px;
     }
 
     .sidebar ul{
@@ -130,7 +129,7 @@
         width: 100%;
         padding-top: 30px;
         padding-bottom: 20px;
-        margin-left: 10px;
+        margin-left: 0px;
         font-size: 15px;
         color: black;
         box-sizing: border-box;
@@ -196,6 +195,7 @@
         width: 100%;
         height: 4px;
         background-color: white;
+        border-radius: 10px;
     }
 
     #check{
