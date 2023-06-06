@@ -1,6 +1,11 @@
 <template>
   <TabbedNavigation webTitle="Slap Soil" sidebarTitle="Components">
-    <Tabs title="Home"></Tabs>
+    <Tabs title="Home">
+        <div class="container">
+            <Greetings/>
+            <btnSoil text = "Start Browsing" />
+        </div>
+    </Tabs>
     <Tabs title="Component 1"></Tabs>
     <Tabs title="Component 2"></Tabs>
     <Tabs title="Component 3"></Tabs>
@@ -16,12 +21,16 @@
 <script>
 import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
+import Greetings from './components/HomeGreeting.vue'
+import btnSoil from './components/BtnSoil.vue'
 
 export default{
   name: 'App',
   components: {
     Tabs,
     TabbedNavigation,
+    Greetings,
+    btnSoil,
   },
   data (){
     return{
@@ -32,5 +41,5 @@ export default{
 </script>
 
 <style scoped>
-  
+
 </style>
