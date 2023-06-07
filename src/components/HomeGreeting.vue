@@ -6,8 +6,8 @@
 </template>
 
 
-<script>
-import btnSoil from './btnSoil.vue'
+<script>    
+import btnSoil from './BtnSoil.vue'
 
 export default {
     components: {
@@ -24,6 +24,6 @@ export default {
 <style>
     .greetings h1{
         color: white;
-        font-size: 140px;
+        font-size: clamp(6.25rem, 3.125rem + 10vw, 8.75rem);
     }
 </style>
