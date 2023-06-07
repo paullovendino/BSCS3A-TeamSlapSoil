@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-.input-field {
+.input-field-light {
   background-color: #E6CCB2;
   padding: 10px;
   border: 1px solid #7F5539;
@@ -34,13 +34,32 @@ export default {
   outline: #7F5539;
 }
 
-.underlined {
+.input-field-dark {
+  background-color: #7F5539;
+  padding: 10px;
+  border: 1px solid #E6CCB2;
+  border-radius: 4px;
+  outline: #E6CCB2;
+  color: white;
+}
+
+.underlined-light {
+  border: none;
+  border-bottom: 1px solid #E6CCB2;
+  outline: none;
+}
+
+.underlined-dark {
   border: none;
   border-bottom: 1px solid #7F5539;
   outline: none;
 }
 
-.outlined {
+.outlined-light {
+  outline: 1px solid #E6CCB2;
+}
+
+.outlined-dark {
   outline: 1px solid #7F5539;
 }
 
