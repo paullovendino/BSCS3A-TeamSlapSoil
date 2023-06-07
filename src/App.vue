@@ -5,7 +5,7 @@
             <Greetings/>
         </div>
     </Tabs>
-    <Tabs title="Component 1"></Tabs>
+    <Tabs title="Component 1"><Template /></Tabs>
     <Tabs title="Component 2"></Tabs>
     <Tabs title="Component 3"></Tabs>
     <Tabs title="Component 4"></Tabs>
@@ -21,6 +21,7 @@
 import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
 import Greetings from './components/HomeGreeting.vue'
+import Template from './components/Content-Template.vue'
 
 
 export default{
@@ -28,7 +29,8 @@ export default{
   components: {
     Tabs,
     TabbedNavigation,
-    Greetings
+    Greetings,
+    Template
   },
   data (){
     return{
