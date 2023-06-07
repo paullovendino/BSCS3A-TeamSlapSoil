@@ -144,14 +144,14 @@
 
     ul li:hover{
         padding-left: 15px;
-        color: #FBBA72;
+        color: #7F5539;
         cursor: pointer;
     }
 
     ul li.active{
         padding-left: 15px;
         background: #ede0d4;
-        color: #FBBA72;
+        color: #7F5539;
     }
 
     .sidebar header{
