@@ -15,6 +15,7 @@ export default {
       options: [
         { value: 'London', label: 'London' },
         { value: 'Paris', label: 'Paris' },
+        { value: 'New York', label: 'New York' },
         { value: 'Milan', label: 'Milan' }
       ]
     };
