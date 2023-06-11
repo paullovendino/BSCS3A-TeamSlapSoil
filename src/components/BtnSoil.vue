@@ -75,14 +75,6 @@
         cursor: default;
     }
 
-    .disabled{
-        pointer-events: none;
-    }
-
-    .disabled:hover{
-        pointer-events: none;
-    }
-
     .outlined{
         border: 1px solid black;
         box-shadow: none;
