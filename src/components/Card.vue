@@ -24,7 +24,7 @@
     #wrapper{
         background: #E6CCB2;
         color: #7F5539;
-        box-shadow: 0 3px 5px 5px rgb(0, 0, 0, 0.5);
+        box-shadow: 3px 3px rgb(0, 0, 0, 0.5);
         width: fit-content;
         min-width: 400px;
         height: auto;
