@@ -5,7 +5,7 @@
         <h1>Button Component</h1>
       </div>
       <div class="wrapperBottom">
-        <BtnSoil :text="BtnText" :type="BtnTypeSelected" :size="BtnSizeSelected" :disabled="BtnDisable"/>
+        <BtnSoil :text="text" :type="typeSelected" :size="sizeSelected" :disabled="disable"/>
       </div>
     </div>
 
@@ -15,10 +15,10 @@
         <table>
           <tr>
             <td>
-              <Checkbox label="Text" name="text" @isChecked="BtnTextEnabled"/>
+              <Checkbox label="Text" name="text" @isChecked="TextEnabled"/>
             </td>
             <td>
-              <Checkbox label="Disabled" name="text" @isChecked="BtnDisabled"/>
+              <Checkbox label="Disabled" name="text" @isChecked="Disabled"/>
             </td>
           </tr>
         </table>
@@ -26,11 +26,11 @@
       <ExpansionPanel title="Types">
         <table class="expanTable">
           <tr>
-            <td><RadioButton label="Default" name="BtnType" value="default" @valueChanged="BtnTypeChanged"/></td>
-            <td><RadioButton label="Outline" name="BtnType" value="outlined" @valueChanged="BtnTypeChanged"/></td>
-            <td><RadioButton label="Text"  name="BtnType" value="text" @valueChanged="BtnTypeChanged"/></td>
-            <td><RadioButton label="Tonal"  name="BtnType" value="tonal" @valueChanged="BtnTypeChanged"/></td>
-            <td><RadioButton label="Plain"  name="BtnType" value="plain" @valueChanged="BtnTypeChanged"/></td>
+            <td><RadioButton label="Default" name="BtnType" value="default" @valueChanged="TypeChanged"/></td>
+            <td><RadioButton label="Outline" name="BtnType" value="outlined" @valueChanged="TypeChanged"/></td>
+            <td><RadioButton label="Text"  name="BtnType" value="text" @valueChanged="TypeChanged"/></td>
+            <td><RadioButton label="Tonal"  name="BtnType" value="tonal" @valueChanged="TypeChanged"/></td>
+            <td><RadioButton label="Plain"  name="BtnType" value="plain" @valueChanged="TypeChanged"/></td>
           </tr>
         </table>
       </ExpansionPanel>
@@ -38,15 +38,15 @@
       <ExpansionPanel title="Size">
         <table class="expandTable">
           <tr>
-            <td><RadioButton label="xx-small" name="BtnSize" value="xx-small" @valueChanged="BtnSizeChanged"/></td>
-            <td><RadioButton label="x-small" name="BtnSize" value="x-small" @valueChanged="BtnSizeChanged"/></td>
-            <td><RadioButton label="small" name="BtnSize" value="small" @valueChanged="BtnSizeChanged"/></td>
-            <td><RadioButton label="medium" name="BtnSize" value="medium" @valueChanged="BtnSizeChanged"/></td>
+            <td><RadioButton label="xx-small" name="BtnSize" value="xx-small" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="x-small" name="BtnSize" value="x-small" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="small" name="BtnSize" value="small" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="medium" name="BtnSize" value="medium" @valueChanged="SizeChanged"/></td>
           </tr>
           <tr>
-            <td><RadioButton label="large" name="BtnSize" value="large" @valueChanged="BtnSizeChanged"/></td>
-            <td><RadioButton label="x-large" name="BtnSize" value="x-large" @valueChanged="BtnSizeChanged"/></td>
-            <td><RadioButton label="xx-large" name="BtnSize" value="xx-large" @valueChanged="BtnSizeChanged"/></td>
+            <td><RadioButton label="large" name="BtnSize" value="large" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="x-large" name="BtnSize" value="x-large" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="xx-large" name="BtnSize" value="xx-large" @valueChanged="SizeChanged"/></td>
           </tr>
         </table>
       </ExpansionPanel>
@@ -72,31 +72,31 @@ import RadioButton from '/src/components/RadioButton.vue'
      },
      data (){
          return{
-         BtnTypeSelected: 'default',
-         BtnSizeSelected: 'small',
-         BtnText: '',
-         BtnDisable: false,
+         typeSelected: 'default',
+         sizeSelected: 'small',
+         text: '',
+         disable: false,
          }
      },
      methods: {
-         BtnTypeChanged(event){
-         this.BtnTypeSelected = event
+         TypeChanged(event){
+         this.typeSelected = event
          },
-         BtnSizeChanged(event){
-         this.BtnSizeSelected = event
+         SizeChanged(event){
+         this.sizeSelected = event
          },
-         BtnTextEnabled(event){
+         TextEnabled(event){
          if(event){
-             this.BtnText = "Button"
+             this.text = "Button"
          }else{
-             this.BtnText = ''
+             this.text = ''
          }
          },
-         BtnDisabled(event){
+         Disabled(event){
          if(event){
-             this.BtnDisable = true
+             this.disable = true
          }else{
-             this.BtnDisable = false
+             this.disable = false
          }
          }
      }
