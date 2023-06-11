@@ -27,7 +27,7 @@ const displayedItem = computed(() => props.label);
 .checkbox-label {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 8px;
   color: #9C6644;
 }
@@ -36,8 +36,8 @@ input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border: 2px solid brown;
   border-radius: 4px;
   outline: none;
