@@ -1,34 +1,34 @@
 <template>
   <div>
-    <label class="checkbox-label">
-      <input type="checkbox" v-model="selectedItems">
-      {{ label }}
-    </label>
-  </div>
+        <input type="checkbox" :name="name" :value="value" :id="id" @change="$emit('isChecked', $event.target.checked)" />
+        <label class="checkbox-label" :for="name">
+            {{ label }}
+        </label>
+    </div>
 </template>
 
-<script setup>
-import { ref, computed } from 'vue'
-
-const props = defineProps({
-  label: {
-    type: String,
-    default: 'item' 
+<script>
+  export default {
+    name: 'Checkbox',
+    props: {
+        name: String,
+        value: String,
+        label: String,
+        id: String,
+    }
   }
-});
-
-const selectedItems = ref(false);
-
-const displayedItem = computed(() => props.label);
-
 </script>
 
 <style scoped>
+div{
+  display: flex;
+  align-items: center;
+}
+
 .checkbox-label {
   display: flex;
   align-items: center;
   font-size: 15px;
-  margin-bottom: 8px;
   color: #7F5539;
 }
 
@@ -43,7 +43,6 @@ input[type="checkbox"] {
   outline: none;
   vertical-align: middle;
   position: relative;
-  top: 2px;
   margin-right: 4px;
   cursor: pointer;
 }
