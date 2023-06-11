@@ -1,6 +1,10 @@
 <template>
     <div>
-        <input type="radio" :name="name" :value="value" :id="id" @click="$emit('valueChanged', $event.target.value)"/>
+        <input type="radio" :name="name" 
+        :value="value" :id="id" 
+        @click="$emit('valueChanged', $event.target.value)" 
+        :disabled="disabled"
+        :checked="checked"/>
         <label class="radio-label" :for="name">
             {{ label }}
         </label>
@@ -14,6 +18,8 @@
             value: String,
             label: String,
             id: String,
+            disabled: false,
+            checked: false
         }
     }
 </script>
@@ -60,4 +66,17 @@
         font-size: 12px;
         color: white;
     }
+
+    input:disabled ~ .radio-label,
+    input[type="radio"][disabled]{
+        cursor: default;
+        color: #f4d9bd !important;
+    }
+
+    input:disabled ~ .radio-icon,
+    input[type="radio"][disabled]{
+        background-color: #f4d9bd;
+        border-color: #f8d6b1;
+    }
+
 </style>
