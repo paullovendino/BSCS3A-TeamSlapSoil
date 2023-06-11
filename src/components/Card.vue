@@ -1,5 +1,5 @@
 <template>
-    <div :class="type">
+    <div :class="type" id="wrapper">
         <div class="content">
             <h2 v-if="title != '' ">{{ title }}</h2>
             <h4 v-if="subTitle != ''">{{ subtitle }}</h4>
@@ -21,10 +21,10 @@
 </script>
 
 <style scoped>
-    div{
+    #wrapper{
         background: #E6CCB2;
         color: #7F5539;
-        box-shadow: 3px 3px rgb(0, 0, 0, 0.5);
+        box-shadow: 0 3px 5px 5px rgb(0, 0, 0, 0.5);
         width: fit-content;
         max-width: 400px;
         height: auto;
@@ -34,19 +34,14 @@
         padding: 20px;
     }
 
-    .image{
-        width: 100%;
-        max-height: 200px;
-    }
-
     .outlined{
         border: 2px solid black;
-        box-shadow: none;
+        box-shadow: none !important;
     }
 
     .tonal{
         background: #EDE0D4;
-        box-shadow: none;
+        box-shadow: none !important;
     }
 
     h2{
