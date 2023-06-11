@@ -35,17 +35,16 @@ export default {
 
 <style scoped>
 .expansion-panel {
-  border: 1px solid #ccc;
+  border: 1px solid #7F5539;
   border-radius: 4px;
   margin-bottom: 10px;
-  min-width: 750px;
 }
 
 .panel-header {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color: #E6CCB2;
   cursor: pointer;
 }
 
@@ -66,8 +65,9 @@ export default {
   padding: 10px;
   border-top: 1px solid black;
   color: black;
-  background: white;
+  background: #fbe5d0;
 }
+
 .panel-transition-enter-active,
 .panel-transition-leave-active {
   transition: height 0.1s ease;
