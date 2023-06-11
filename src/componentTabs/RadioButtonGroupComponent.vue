@@ -2,7 +2,7 @@
     <Template>
         <div class="wrapperLeft">
             <div class="wrapperTop">
-                <h1>Radiobutton Component</h1>
+                <h1>Radiobutton Group Component</h1>
             </div>
             <div class="wrapperBottom">
                 <RadioButtonGroup :options="options" :disabled="disabled" :title="title"/>
