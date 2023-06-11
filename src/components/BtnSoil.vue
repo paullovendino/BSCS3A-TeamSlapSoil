@@ -51,6 +51,7 @@
         padding: 10px;
         border: none;
         box-shadow: 2px 2px rgb(0, 0, 0, 0.5);
+        cursor: pointer;
     }
     
     button:hover{
@@ -70,6 +71,8 @@
     button[disabled]{
         background: #E6CCB2;
         color: #EDE0D4;
+        box-shadow: 2px 2px rgb(0, 0, 0, 0.5);
+        cursor: default;
     }
 
     .disabled{
@@ -102,6 +105,7 @@
     .outlined[disabled]{
         background: #E6CCB2;
         color: #EDE0D4;
+        box-shadow: none;
     }
 
     .text{
@@ -127,6 +131,7 @@
     .text[disabled]{
         color: #E6CCB2;
         background: none;
+        box-shadow: none;
     }
 
     .tonal{
@@ -152,6 +157,7 @@
     .tonal[disabled]{
         background: #E6CCB2;
         color: #EDE0D4;
+        box-shadow: none;
     }
 
     .plain{
@@ -177,5 +183,6 @@
     .plain[disabled]{
         color: #E6CCB2;
         background: none;
+        box-shadow: none;
     }
 </style>
