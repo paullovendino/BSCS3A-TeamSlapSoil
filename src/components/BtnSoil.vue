@@ -26,55 +26,45 @@
 <style scoped>
     .xx-small{
         font-size: xx-small;
-        width: 75px;
         height: 30px
     }
 
     .x-small{
         font-size: x-small;
-        width: 80px;
         height: 30px
     }
     .medium{
         font-size: medium;
-        width: 120px;
         height: 50px
     }
 
     .large{
         font-size: large;
-        width: 140px;
         height: 60px
     }
 
     .x-large{
         font-size: x-large;
-        width: 175px;
         height: 75px
     }
 
     .xx-large{
         font-size: xx-large;
-        width: 225px;
         height: 95px
     }
 
     button{
-        background: #e6ccb2;
-        color: black;
-        padding: 10px 20px;
+        background: #B08968;
+        color: #E6CCB2;
+        padding: 10px;
         border: none;
         box-shadow: 2px 2px rgb(0, 0, 0, 0.5);
-        border-radius: 20px;
-        font-size: 20px;
-        transition: all .3s;
     }
     
     button:hover{
         background: #7F5539;
         color: #EDE0D4;
         box-shadow: 3px 3px rgb(0, 0, 0, 0.5);
-        cursor: pointer;
     }
 
     button:active{
