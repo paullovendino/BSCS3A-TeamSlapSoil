@@ -113,7 +113,7 @@
     .text:hover{
         box-shadow: none;
         color: #7F5539;
-        background: #EDE0D4;
+        background: #e9c9ab;
     }
 
     .text:active{
