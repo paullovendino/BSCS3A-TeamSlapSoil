@@ -29,7 +29,7 @@ const displayedItem = computed(() => props.label);
   align-items: center;
   font-size: 15px;
   margin-bottom: 8px;
-  color: #9C6644;
+  color: #7F5539;
 }
 
 input[type="checkbox"] {
