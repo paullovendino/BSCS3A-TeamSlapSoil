@@ -24,7 +24,7 @@
         </table>
       </div>
       <ExpansionPanel title="Types">
-        <table class="expanTable">
+        <table class="expandTable">
           <tr>
             <td><RadioButton label="Default" name="BtnType" value="default" @valueChanged="TypeChanged"/></td>
             <td><RadioButton label="Outline" name="BtnType" value="outlined" @valueChanged="TypeChanged"/></td>
@@ -131,7 +131,7 @@ import RadioButton from '/src/components/RadioButton.vue'
     align-items: center;
   }
 
-  .expanTable{
+  .expandTable{
     width: 100%;
   }
 
