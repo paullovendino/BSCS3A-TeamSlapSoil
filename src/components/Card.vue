@@ -26,7 +26,7 @@
         color: #7F5539;
         box-shadow: 0 3px 5px 5px rgb(0, 0, 0, 0.5);
         width: fit-content;
-        max-width: 400px;
+        min-width: 400px;
         height: auto;
     }
 
