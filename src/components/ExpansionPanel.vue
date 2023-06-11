@@ -70,7 +70,7 @@ export default {
 }
 .panel-transition-enter-active,
 .panel-transition-leave-active {
-  transition: height 0.3s ease;
+  transition: height 0.1s ease;
 }
 
 .panel-transition-enter,
