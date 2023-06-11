@@ -26,7 +26,7 @@
       <ExpansionPanel title="Types">
         <table class="expandTable">
           <tr>
-            <td><RadioButton label="Default" name="BtnType" value="default" @valueChanged="TypeChanged"/></td>
+            <td><RadioButton label="Default" name="BtnType" value="default" @valueChanged="TypeChanged" checked="true"/></td>
             <td><RadioButton label="Outline" name="BtnType" value="outlined" @valueChanged="TypeChanged"/></td>
             <td><RadioButton label="Text"  name="BtnType" value="text" @valueChanged="TypeChanged"/></td>
             <td><RadioButton label="Tonal"  name="BtnType" value="tonal" @valueChanged="TypeChanged"/></td>
@@ -40,7 +40,7 @@
           <tr>
             <td><RadioButton label="xx-small" name="BtnSize" value="xx-small" @valueChanged="SizeChanged"/></td>
             <td><RadioButton label="x-small" name="BtnSize" value="x-small" @valueChanged="SizeChanged"/></td>
-            <td><RadioButton label="small" name="BtnSize" value="small" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="small" name="BtnSize" value="small" @valueChanged="SizeChanged" checked="true"/></td>
             <td><RadioButton label="medium" name="BtnSize" value="medium" @valueChanged="SizeChanged"/></td>
           </tr>
           <tr>
