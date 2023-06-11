@@ -12,13 +12,8 @@
         props: {
             text: String,
             size: String,
-            disabled: {
-                type: Boolean,
-                default: false
-            },
-            type: {
-                type: String,
-            }
+            disabled: false,
+            type: String,
         }
     }
 </script>
