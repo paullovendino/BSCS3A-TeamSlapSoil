@@ -1,7 +1,7 @@
 <template>
     <div class="content-container">
         <div class="borderline">
-
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -29,5 +29,8 @@ export default {
         background: transparent;
         border: #CCA481 solid 7px;
         border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
