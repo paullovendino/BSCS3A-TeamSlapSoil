@@ -93,11 +93,7 @@ import RadioButton from '/src/components/RadioButton.vue'
          }
          },
          Disabled(event){
-         if(event){
-             this.disable = true
-         }else{
-             this.disable = false
-         }
+            this.disable = event
          }
      }
     }
