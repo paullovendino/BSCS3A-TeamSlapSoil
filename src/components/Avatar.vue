@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar">
+  <div class="avatar" :style="[ width: resizeOption, height: resizeOption ]">
     <img :src="imageUrl" :alt="altText" class="avatar-image">
   </div>
 </template>
@@ -14,6 +14,10 @@ export default {
     altText: {
       type: String,
       default: 'Avatar'
+    },
+    resizeOption: {
+      type: String,
+      default: '100px' // default resize option value
     }
   }
 };
@@ -24,8 +28,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
   overflow: hidden;
   background-color: #E6CCB2;
