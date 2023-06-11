@@ -1,12 +1,10 @@
 <template>
   <TabbedNavigation webTitle="Slap Soil">
     <Tabs title="Home">
-        <div class="container">
-            <Greetings/>
-        </div>
+        <Greetings />
     </Tabs>
 
-    <Tabs title="Button Component">
+    <Tabs title="Button">
       <ButtonComponentTab/>
     </Tabs>
     
@@ -27,7 +25,7 @@
 <script>
 import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
-import Greetings from './components/HomeGreeting.vue'
+import Greetings from './componentTabs/HomeGreeting.vue'
 import ButtonComponentTab from './componentTabs/ButtonComponent.vue'
 
 
@@ -43,5 +41,5 @@ export default{
 </script>
 
 <style scoped>
-  
+
 </style>
