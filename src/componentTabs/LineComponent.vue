@@ -15,7 +15,7 @@
                 <table>
                 <tr>
                     <td>
-                        <RadioButton label="Vertical" name="alignment" value="vertical" @valueChanged="alignmentChanged"/>
+                        <RadioButton label="Vertical" name="alignment" value="vertical" @valueChanged="alignmentChanged" checked="true"/>
                     </td>
                     <td>
                         <RadioButton label="Horizontal" name="alignment" value="horizontal" @valueChanged="alignmentChanged"/>
