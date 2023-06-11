@@ -26,31 +26,28 @@
 <style scoped>
     .xx-small{
         font-size: xx-small;
-        height: 30px
+        height: 25px;
     }
 
     .x-small{
         font-size: x-small;
-        height: 30px
+        height: 30px;
     }
+    
     .medium{
         font-size: medium;
-        height: 50px
     }
 
     .large{
         font-size: large;
-        height: 60px
     }
 
     .x-large{
         font-size: x-large;
-        height: 75px
     }
 
     .xx-large{
         font-size: xx-large;
-        height: 95px
     }
 
     button{
