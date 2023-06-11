@@ -75,7 +75,7 @@ import RadioButton from '/src/components/RadioButton.vue'
          BtnTypeSelected: 'default',
          BtnSizeSelected: 'small',
          BtnText: '',
-         BtnDisable: Boolean,
+         BtnDisable: false,
          }
      },
      methods: {
