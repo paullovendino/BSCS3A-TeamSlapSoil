@@ -1,8 +1,9 @@
 <template>
   <div class="radio-group">
+    <h3>{{ title }}</h3>
     <label v-for="option in options" :key="option.value" class="radio-label">
-      <input type="radio" v-model="selectedOption" :value="option.value" class="radio-input">
-      <span class="radio-text">{{ option.label }}</span>
+      <input type="radio" v-model="selectedOption" :value="option.value" :name="name" :id="options.label" class="radio-input" :disabled="disabled">
+      <span class="radio-text" :for="options.label">{{ option.label }}</span>
     </label>
   </div>
 </template>
@@ -13,7 +14,10 @@ export default {
     options: {
       type: Array,
       required: true
-    }
+    },
+    disabled: false,
+    title: String,
+    name: String,
   },
   data() {
     return {
@@ -27,6 +31,8 @@ export default {
 .radio-group {
   display: flex;
   flex-direction: column;
+  border: 2px solid #67432c;
+  padding: 10px
 }
 
 .radio-label {
@@ -49,11 +55,50 @@ export default {
   cursor: pointer;
 }
 
-.radio-input:checked {
-  border-color: #7F5539;
-}
-
 .radio-text {
   color: #9C6644;
 }
+
+input[type="radio"]{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 14px;
+      height: 14px;
+      border: 2px solid brown;
+      border-radius: 4px;
+      outline: none;
+      position: relative;
+      margin-right: 4px;
+      cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: brown;
+    border-color: #DDB892;
+}
+input[type="radio"]:checked::after {
+    content: "\2713";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    color: white;
+}
+input:disabled ~ .radio-text,
+input[type="radio"][disabled]{
+    cursor: default;
+    color: #f4cca1 !important;
+}
+input:disabled ~ .radio-icon,
+input[type="radio"][disabled]{
+    background-color: #f4d9bd;
+    border-color: #f8d6b1;
+}
+.radio-group h3{
+  color: #67432c;
+  margin: 0 10px 10px 10px;
+}
+
 </style>
