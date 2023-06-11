@@ -68,11 +68,6 @@ export default {
   color: black;
   background: white;
 }
-.panel-content:hover{
-    background: black;
-    transition: ease .5s;
-}
-
 .panel-transition-enter-active,
 .panel-transition-leave-active {
   transition: height 0.3s ease;
