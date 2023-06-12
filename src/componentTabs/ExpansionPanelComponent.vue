@@ -34,7 +34,7 @@ import ExpansionPanel from '/src/components/ExpansionPanel.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 
     export default{
-     name: 'SwitchComponent',
+     name: 'ExpansionPanelComponent',
      components: {
          Switch,
          Template,
