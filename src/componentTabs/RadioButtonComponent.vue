@@ -43,7 +43,7 @@ import Checkbox from '/src/components/Checkbox.vue'
 import RadioButton from '../components/RadioButton.vue'
 
     export default{
-     name: 'CheckboxComponent',
+     name: 'RadioButtonComponent',
      components: {
         Template,
         Checkbox,
