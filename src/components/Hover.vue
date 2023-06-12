@@ -1,6 +1,6 @@
 <template>
-  <div :class="['Hover', type]" :disabled="disabled">
-    <h2>Hover Me!</h2>
+  <div :class="[shape, hovereffect, 'hover', disabled? 'disabled' : '']">
+    <slot></slot>
   </div>
 </template>
 
@@ -8,52 +8,64 @@
 export default {
     name: 'Hover',
     props: {
-      type: String,
-      disabled: false
+      hovereffect: String,
+      disabled: false,
+      shape: String,
   },
 }
 </script>
 
 <style scoped>
-    .Hover {
+    .hover {
       background-color: #b08968;
       color: white;
       border:solid 3px #7F5539;
-      border-radius: 10px;
       cursor: pointer;
-      font-size: 20px;
-      padding: 15px;
+      padding: 10px;
       transition:ease-in-out .2s;
+      min-width: 40px;
     }
-    .ChangeBackgroundColor:hover {
+
+    .round{
+      border-radius: 10px;
+    }
+
+    .hover:hover {
       background-color: #EDE0D4;
       color: #7F5539;
     }
-    .Underlined:hover{
+    .underlined:hover{
       text-decoration: underline;
       color: white ;
     }
-    .ChangeTextColor:hover{
+    .text-color:hover{
       color: black;
     }
-    .ZoomIn:hover{
+    .zoom-in:hover{
       transform: scale(1.5);
     }
-    .ZoomOut:hover{
+    .zoom-out:hover{
       transform: scale(0.5);
     }
-    .TextZoom h2:hover{
-      transform: scale(1.2);
-      transition: .3s;
+    .shadow:hover{
+      box-shadow: 3px 3px rgb(0, 0, 0, 0.5);
     }
-    .RightTilt:hover{
+    .right-tilt:hover{
       transform: rotate(40deg);
     }
-    .LeftTilt:hover{
+    .left-tilt:hover{
       transform: rotate(-40deg);
     }
-    .BorderLine:hover{
-      border: solid 10px #7F5539;
+    .border:hover{
+      border: solid 5px #7F5539;
       border-radius: 0px;
+    }
+
+    .disabled:hover{
+      transform: none;
+      box-shadow: none;
+      background: #b08968;
+      color: white;
+      cursor: default;
     }
 </style>
