@@ -48,6 +48,8 @@
       <BreadCrumbComponent/>
     </Tabs>
   </TabbedNavigation>
+  
+  <Footers currentYear = "2023" />
 </template>
 
 <script>
@@ -66,7 +68,7 @@ import ComboBoxComponent from './componentTabs/ComboBoxComponent.vue'
 import ImageComponent from './componentTabs/ImageComponent.vue'
 import AppBarComponent from './componentTabs/AppBarComponent.vue'
 import BreadCrumbComponent from './componentTabs/BreadCrumbComponent.vue'
-
+import Footers from './components/Footers.vue'
 
 export default{
   name: 'App',
@@ -85,7 +87,8 @@ export default{
     ComboBoxComponent,
     ImageComponent,
     AppBarComponent,
-    BreadCrumbComponent
+    BreadCrumbComponent,
+    Footers
   },
 }
 </script>
