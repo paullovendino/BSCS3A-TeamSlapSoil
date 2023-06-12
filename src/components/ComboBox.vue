@@ -1,24 +1,20 @@
 <template>
-  <div class="combo-box" :disabled="disabled">
-    <select v-model="selectedOption" class="select-box">
+  <div class="combo-box">
+    <select :class="['select-box', disabled? 'disabled': '']" :disabled="disabled">
       <option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option>
     </select>
-    <span class="selected-option">Selected option: {{ selectedOption }}</span>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      selectedOption: '',
-      options: [
-        { value: 'London', label: 'London' },
-        { value: 'Paris', label: 'Paris' },
-        { value: 'New York', label: 'New York' },
-        { value: 'Milan', label: 'Milan' }
-      ]
-    };
+  name: 'ComboBox',
+  props: {
+    options: {
+      type: Array,
+      required: true,
+    },
+    disabled: false,
   }
 };
 </script>
@@ -45,6 +41,10 @@ export default {
 
 .select-box:hover {
   background-color: #7F5539;
+}
+
+.disabled:hover{
+  background-color: #9C6644;
 }
 
 .selected-option {
