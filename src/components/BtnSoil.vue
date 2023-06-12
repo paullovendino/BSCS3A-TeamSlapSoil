@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button :class="[size, type]" :disabled="disabled">
+        <button :class="[shape, size, type]" :disabled="disabled">
             <p>{{ text }}</p>
         </button>
     </div>
@@ -14,6 +14,7 @@
             size: String,
             disabled: false,
             type: String,
+            shape: String
         }
     }
 </script>
@@ -45,17 +46,19 @@
         font-size: xx-large;
     }
 
+    .round{
+        border-radius: 20px;
+    }
+
     button{
         background: #E6CCB2;
         color: black;
-        font-size: 18px;
         font-family: 'Quicksand', sans-serif;
-        padding: 10px 20px;
         border: none;
         box-shadow: 2px 2px rgb(0, 0, 0, 0.5);
         cursor: pointer;
-        border-radius: 20px;
-        transition: ease-in-out .3s;
+        padding: 10px;
+        transition: .3s ease;
     }
     
     button:hover{
