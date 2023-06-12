@@ -1,82 +1,119 @@
 <template>
-  <div class="expansion-panel">
-    <div class="panel-header" @click="togglePanel">
-      <span class="title">{{ title }}</span>
-      <span class="arrow-icon">{{ expanded ? '▼' : '►' }}</span>
-    </div>
-    <transition name="panel-transition">
-      <div v-show="expanded" class="panel-content">
-        <slot></slot>
-      </div>
-    </transition>
-  </div>
+    <Template>
+        <div class="wrapperLeft">
+            <div class="wrapperTop">
+                <h1>Expansion Panel Component</h1>
+            </div>
+            <div class="wrapperBottom">
+                <ExpansionPanel :title="title">
+                    <p>Sample Content Here</p>
+                </ExpansionPanel>
+            </div>
+        </div>
+
+        <div class="wrapperRight">
+            <h2>Attributes</h2>
+            <div class="attributes">
+                <table>
+                <tr>
+                    <td>
+                        <Checkbox label="Title" name="title" @isChecked="titleEnabled"/>
+                    </td>
+                </tr>
+                </table>
+            </div> 
+        </div> 
+    </Template>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      expanded: false
-    };
-  },
-  props: {
-    title: {
-      type: String,
-      required: true
+import Template from '/src/components/Content-Template.vue'
+import RadioButton from '/src/components/RadioButton.vue'
+import Switch from '/src/components/Switch.vue'
+import ExpansionPanel from '/src/components/ExpansionPanel.vue'
+import Checkbox from '/src/components/Checkbox.vue'
+
+    export default{
+     name: 'SwitchComponent',
+     components: {
+         Switch,
+         Template,
+         RadioButton,
+         ExpansionPanel,
+         Checkbox
+     },
+     data (){
+         return{
+          title: '',
+         }
+     },
+        methods: {
+            titleEnabled(event){
+                if(event){
+                  this.title = "Sample Title"
+                }else{
+                  this.title = ''
+                }
+            }
+        }
     }
-  },
-  methods: {
-    togglePanel() {
-      this.expanded = !this.expanded;
-    }
-  }
-};
 </script>
 
 <style scoped>
-.expansion-panel {
-  border: 1px solid #7F5539;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  min-width: 200px;
-}
+  .wrapperLeft{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    padding-right: 10px;
+  }
 
-.panel-header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #E6CCB2;
-  cursor: pointer;
-}
+  .wrapperRight{
+    padding: 40px;
+    width: 50%;
+    height: 100%;
+    color: #7F5539;
+  }
 
-.title {
-  flex-grow: 1;
-  font-weight: bold;
-  color: black;
-}
+  .attributes{
+    width: 100%;
+    min-height: 50px;
+    background: #e7c2a4;
+    border: 2px solid #7F5539;
+    border-radius: 20px;
+    margin: 10px 0 15px 0;
+    min-height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.arrow-icon {
-  font-size: 14px;
-  transition: transform 0.3s;
-  color: black;
-  width: 20px;
-}
+  .expandTable{
+    width: 100%;
+  }
 
-.panel-content {
-  padding: 10px;
-  border-top: 1px solid black;
-  color: black;
-  background: #fbe5d0;
-}
+  table{
+    width: 80%;
+  }
 
-.panel-transition-enter-active,
-.panel-transition-leave-active {
-  transition: height 0.1s ease;
-}
+  .wrapperTop{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.panel-transition-enter,
-.panel-transition-leave-to {
-  height: 0;
-  overflow: hidden;
-}
+  .wrapperBottom{
+    width: 100%;
+    height: 90%;
+    border: 2px solid #7F5539;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+
+  .wrapperTop h1{
+    color: #7F5539;
+  }
 </style>
