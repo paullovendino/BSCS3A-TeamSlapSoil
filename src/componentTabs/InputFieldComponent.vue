@@ -5,7 +5,7 @@
           <h1>Input Field Component</h1>
         </div>
         <div class="wrapperBottom">
-          <InputField :type="typeSelected" :placeholder="placeholder" :readonly="readOnly" />
+          <InputField :type="typeSelected" :placeholder="placeholder" :readonly="readOnly" :disabled="disabled" />
         </div>
       </div>
   
@@ -16,6 +16,9 @@
             <tr>
               <td>
                 <Checkbox label="Placeholder" name="placeholder" @isChecked="placeholderEnabled"/>
+              </td>
+              <td>
+                <Checkbox label="Disabled" name="disabled" @isChecked="isDisabled"/>
               </td>
               <td>
                 <Checkbox label="Read-Only" name="read-only" @isChecked="readOnlyEnabled"/>
@@ -68,6 +71,7 @@
            typeSelected: '',
            placeholder: '',
            readOnly: false,
+           disabled: false,
            }
        },
        methods: {
@@ -75,7 +79,6 @@
             this.typeSelected = event
            },
            placeholderEnabled(event){
-            console.log(event)
             if(event){
                 this.placeholder = 'Type your text here'
             }else{
@@ -85,6 +88,10 @@
            readOnlyEnabled(event){
             this.readOnly = event
            },
+           isDisabled(event){
+                this.disabled = event
+           },
+           
        }
       }
   </script>
