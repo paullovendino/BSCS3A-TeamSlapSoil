@@ -41,13 +41,13 @@ refers to a visual element or component used to separate or divide sections of c
 is an important part of Vue.js that lets you pick just one option from a list. It gives users a bunch of choices, but they can only choose one. With Vue's radio button, you have lots of freedom to make it look and work the way you want. You can change how it looks, its style, and how it behaves to fit your app's design. You can also connect data to the selected option, so you can easily get and change the value that the user picked.
 # ![image](https://github.com/paullovendino/BSCS3A-TeamSlapSoil/assets/131155735/e71a9dc1-cb60-46fb-ab83-60aa5d6ddb42)
 # Radio Button Group Component
-
+refers to a group of radio buttons that are mutually exclusive, meaning that only one option can be selected at a time within the group. Radio button groups are commonly used in forms and user interfaces to present a set of options where the user can choose a single value from a predefined list. The purpose of a radio button group component in Vue.js is to provide a way to group related options together and enforce the mutually exclusive selection behavior.
 # ![image](https://github.com/paullovendino/BSCS3A-TeamSlapSoil/assets/131155735/d3bc8505-85d4-4b3a-8c4e-7f35910040e3)
 # Switch Component
 refers to a user interface component or functionality that allows users to toggle between different states or options. The implementation of a switch in Vue.js can vary depending on the specific requirements of your application. A switch component typically consists of a control element such as a checkbox, button, or toggle and associated logic to handle the state transitions. The component should update the underlying data property or emit events to reflect the current state of the switch. 
 # ![image](https://github.com/paullovendino/BSCS3A-TeamSlapSoil/assets/131155735/ed1c2e72-5867-4894-af42-b99e8426fdc3)
 # Tab Container Component
-
+refers to a user interface component that allows users to switch between different sections or views within an application. Each tab represents a distinct content area, and clicking on a tab updates the displayed content to correspond with the selected tab. The purpose of a tab component in Vue.js is to provide an organized and intuitive way for users to navigate and access different sections or categories of content within an application.
 # ![image](https://github.com/paullovendino/BSCS3A-TeamSlapSoil/assets/131155735/e320b701-8c49-490a-a1e6-070ee8d8ea04)
 # Text Area Component 
 is a flexible component for Vue.js that makes it easy to input and edit large amounts of text in a user-friendly way. It can be customized to look and behave just the way developers want it to, so it fits perfectly with their app. It comes with useful features like placeholder text, character limits, and auto-resizing. Developers can also style it in different ways to create attractive and interactive text input areas.
