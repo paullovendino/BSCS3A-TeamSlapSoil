@@ -4,24 +4,50 @@
         <Greetings />
     </Tabs>
 
-    <Tabs title="Button">
+    <Tabs title="Button Component">
       <ButtonComponentTab/>
     </Tabs>
     
-    <Tabs title="Component 2">
-
+    <Tabs title="Line/Divider Component">
+      <LineComponent/>
     </Tabs>
 
-    <Tabs title="Component 3"></Tabs>
-    <Tabs title="Component 4"></Tabs>
-    <Tabs title="Component 5"></Tabs>
-    <Tabs title="Component 6"></Tabs>
-    <Tabs title="Component 7"></Tabs>
-    <Tabs title="Component 8"></Tabs>
-    <Tabs title="Component 9"></Tabs>
+    <Tabs title="Switch Component">
+      <SwitchComponent/>
+    </Tabs>
+    <Tabs title="Input Field Component">
+      <InputFieldComponent/>
+    </Tabs>
+
+    <Tabs title="Text Area Component">
+      <TextAreaComponent/>
+    </Tabs>
+
+    <Tabs title="Avatar Component">
+      <AvatarComponent/>
+    </Tabs>
+
+    <Tabs title="Hover Component">
+      <HoverComponent/>
+    </Tabs>
+
+    <Tabs title="Expansion Panel Component">
+      <ExpansionPanelComponent />
+    </Tabs>
+
+    <Tabs title="ComboBox Component">
+      <ComboBoxComponent/>
+    </Tabs>
+    <Tabs title="Image Component">
+      <ImageComponent/>
+    </Tabs>
+    <Tabs title="AppBar Component">
+      <AppBarComponent/>
+    </Tabs>
+    <Tabs title="BreadCrumb Component">
+      <BreadCrumbComponent/>
+    </Tabs>
   </TabbedNavigation>
-  
-  <Footer currentYear ="2023"/>
 </template>
 
 <script>
@@ -29,12 +55,17 @@ import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
 import Greetings from './componentTabs/HomeGreeting.vue'
 import ButtonComponentTab from './componentTabs/ButtonComponent.vue'
-import LineComponentTab from './componentTabs/LineComponent.vue'
-import CheckboxComponentTab from './componentTabs/CheckboxComponent.vue'
-import RadioButtonComponentTab from './componentTabs/RadioButtonComponent.vue'
-import RadioButtonGroupComponentTab from './componentTabs/RadioButtonGroupComponent.vue'
-import TabContainerComponentTab from './componentTabs/TabContainerComponent.vue'
-import Footer from './components/footer.vue'
+import LineComponent from './componentTabs/LineComponent.vue'
+import SwitchComponent from './componentTabs/SwitchComponent.vue'
+import InputFieldComponent from './componentTabs/InputFieldComponent.vue'
+import TextAreaComponent from './componentTabs/TextAreaComponent.vue'
+import AvatarComponent from './componentTabs/AvatarComponent.vue'
+import HoverComponent from './componentTabs/HoverComponent.vue'
+import ExpansionPanelComponent from './componentTabs/ExpansionPanelComponent.vue'
+import ComboBoxComponent from './componentTabs/ComboBoxComponent.vue'
+import ImageComponent from './componentTabs/ImageComponent.vue'
+import AppBarComponent from './componentTabs/AppBarComponent.vue'
+import BreadCrumbComponent from './componentTabs/BreadCrumbComponent.vue'
 
 
 export default{
@@ -44,12 +75,17 @@ export default{
     TabbedNavigation,
     Greetings,
     ButtonComponentTab,
-    LineComponentTab,
-    CheckboxComponentTab,
-    RadioButtonComponentTab,
-    RadioButtonGroupComponentTab,
-    TabContainerComponentTab,
-    Footer
+    LineComponent,
+    SwitchComponent,
+    InputFieldComponent,
+    TextAreaComponent,
+    AvatarComponent,
+    HoverComponent,
+    ExpansionPanelComponent,
+    ComboBoxComponent,
+    ImageComponent,
+    AppBarComponent,
+    BreadCrumbComponent
   },
 }
 </script>
