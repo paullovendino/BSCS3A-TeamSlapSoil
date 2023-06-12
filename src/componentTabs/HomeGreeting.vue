@@ -3,7 +3,7 @@
         <div class="greetings">
             <h1>{{ greeting }}</h1>
         </div>
-        <btnSoil text="Start Browsing" />
+        <btnSoil text="Start Browsing" shape="round" />
     </div>
 </template>
 
