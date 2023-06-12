@@ -1,8 +1,6 @@
 <template>
-  <div class="image-component-wrapper">
-    <div class="image-wrapper">
-        <img src="https://media.istockphoto.com/id/1096052566/vector/stamprsimp2red.jpg?s=612x612&w=0&k=20&c=KVu0nVz7ZLbZsRsx81VBZcuXZ1MlEmLk9IQabO2GkYo=" :alt="altText" />
-    </div>
+  <div class="image-wrapper">
+    <img :src="imageUrl" :alt="alt" />
   </div>
 </template>
 
@@ -13,7 +11,7 @@ export default {
       type: String,
       required: true
     },
-    altText: {
+    alt: {
       type: String,
       required: true
     }
@@ -22,13 +20,14 @@ export default {
 </script>
 
 <style scoped>
-    .image-component-wrapper{
-        display: flex;
-    }
     .image-wrapper{
-        display: flex;
-        height: 300px;
-        align-items: center;
-        justify-content: center;
+      width: 100%;
+      height: 100%
+    }
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 </style>
