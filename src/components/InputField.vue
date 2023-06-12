@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" :class="type" :placeholder="placeholder" :readonly="readonly" >
+    <input type="text" :class="type" :placeholder="placeholder" :readonly="readonly" :disabled="disabled">
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default {
     },
     placeholder: '',
     readonly: false,
+    disabled: false,
   }
 };
 </script>
@@ -72,5 +73,16 @@ input{
   color: #E6CCB2;
   border: none;
   outline: none;
+}
+
+input[type="text"]::placeholder{
+  color: #9f6e3d
+}
+
+input:disabled,
+input:disabled ~ input::placeholder,
+input[type = "text"][disabled]{
+  background: #cab29d;
+  border-color: #a58d75;
 }
 </style>
