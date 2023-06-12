@@ -38,6 +38,7 @@ export default {
   border: 1px solid #7F5539;
   border-radius: 4px;
   margin-bottom: 10px;
+  min-width: 200px;
 }
 
 .panel-header {
