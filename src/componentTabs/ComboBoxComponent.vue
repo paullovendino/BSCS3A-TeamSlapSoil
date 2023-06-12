@@ -30,7 +30,7 @@ import ComboBox from '/src/components/ComboBox.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 
     export default{
-     name: 'SwitchComponent',
+     name: 'CheckboxComponent',
      components: {
          ComboBox,
          Template,
