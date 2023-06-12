@@ -1,2 +1,2 @@
 # SlapSoil
-For Semestral Project Purposes Only
+is a collection of components built on top of vue.js. It's a framework designed to be easily integrated into existing projects. The main aim of Slapsoil is to simplify application development and enhance its design while keeping all the essential features intact. We value the freedom of front-end developers, allowing them to customize each component independently in terms of the overall design. Our focus is to enable fast and efficient creation and production of applications.
