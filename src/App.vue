@@ -9,44 +9,69 @@
     </Tabs>
     
     <Tabs title="Line/Divider Component">
-      <LineComponent/>
+      <LineComponentTab/>
     </Tabs>
 
     <Tabs title="Switch Component">
-      <SwitchComponent/>
+      <SwitchComponentTab/>
     </Tabs>
+
     <Tabs title="Input Field Component">
-      <InputFieldComponent/>
+      <InputFieldComponentTab/>
     </Tabs>
 
     <Tabs title="Text Area Component">
-      <TextAreaComponent/>
+      <TextAreaComponentTab/>
     </Tabs>
 
     <Tabs title="Avatar Component">
-      <AvatarComponent/>
+      <AvatarComponentTab/>
     </Tabs>
 
     <Tabs title="Hover Component">
-      <HoverComponent/>
+      <HoverComponentTab/>
     </Tabs>
 
     <Tabs title="Expansion Panel Component">
-      <ExpansionPanelComponent />
+      <ExpansionPanelComponentTab />
     </Tabs>
 
     <Tabs title="ComboBox Component">
-      <ComboBoxComponent/>
+      <ComboBoxComponentTab/>
     </Tabs>
+
     <Tabs title="Image Component">
-      <ImageComponent/>
+      <ImageComponentTab/>
     </Tabs>
+
     <Tabs title="AppBar Component">
-      <AppBarComponent/>
+      <AppBarComponentTab/>
     </Tabs>
+
     <Tabs title="BreadCrumb Component">
-      <BreadCrumbComponent/>
+      <BreadCrumbComponentTab/>
     </Tabs>
+
+    <Tabs title="Checkbox Component">
+      <CheckboxComponentTab/>
+    </Tabs>
+
+    <Tabs title="Radiobutton Component">
+      <RadioButtonComponentTab/>
+    </Tabs>
+
+    <Tabs title="Radiobutton Group Component">
+      <RadioButtonGroupComponentTab/>
+    </Tabs>
+
+    <Tabs title="Card Component">
+      <CardComponentTab/>
+    </Tabs>
+
+    <Tabs title="Tabs Component">
+      <TabContainerComponentTab/>
+    </Tabs>
+
   </TabbedNavigation>
   
   <Footers currentYear = "2023" />
@@ -57,17 +82,22 @@ import Tabs from './components/navTabs.vue'
 import TabbedNavigation from './components/TabbedNavigation.vue'
 import Greetings from './componentTabs/HomeGreeting.vue'
 import ButtonComponentTab from './componentTabs/ButtonComponent.vue'
-import LineComponent from './componentTabs/LineComponent.vue'
-import SwitchComponent from './componentTabs/SwitchComponent.vue'
-import InputFieldComponent from './componentTabs/InputFieldComponent.vue'
-import TextAreaComponent from './componentTabs/TextAreaComponent.vue'
-import AvatarComponent from './componentTabs/AvatarComponent.vue'
-import HoverComponent from './componentTabs/HoverComponent.vue'
-import ExpansionPanelComponent from './componentTabs/ExpansionPanelComponent.vue'
-import ComboBoxComponent from './componentTabs/ComboBoxComponent.vue'
-import ImageComponent from './componentTabs/ImageComponent.vue'
-import AppBarComponent from './componentTabs/AppBarComponent.vue'
-import BreadCrumbComponent from './componentTabs/BreadCrumbComponent.vue'
+import LineComponentTab from './componentTabs/LineComponent.vue'
+import SwitchComponentTab from './componentTabs/SwitchComponent.vue'
+import InputFieldComponentTab from './componentTabs/InputFieldComponent.vue'
+import TextAreaComponentTab from './componentTabs/TextAreaComponent.vue'
+import AvatarComponentTab from './componentTabs/AvatarComponent.vue'
+import HoverComponentTab from './componentTabs/HoverComponent.vue'
+import ExpansionPanelComponentTab from './componentTabs/ExpansionPanelComponent.vue'
+import ComboBoxComponentTab from './componentTabs/ComboBoxComponent.vue'
+import ImageComponentTab from './componentTabs/ImageComponent.vue'
+import AppBarComponentTab from './componentTabs/AppBarComponent.vue'
+import BreadCrumbComponentTab from './componentTabs/BreadCrumbComponent.vue'
+import CheckboxComponentTab from './componentTabs/CheckboxComponent.vue'
+import RadioButtonComponentTab from './componentTabs/RadioButtonComponent.vue'
+import RadioButtonGroupComponentTab from './componentTabs/RadioButtonGroupComponent.vue'
+import CardComponentTab from './componentTabs/CardComponent.vue'
+import TabContainerComponentTab from './componentTabs/TabContainerComponent.vue'
 import Footers from './components/Footers.vue'
 
 export default{
@@ -77,17 +107,22 @@ export default{
     TabbedNavigation,
     Greetings,
     ButtonComponentTab,
-    LineComponent,
-    SwitchComponent,
-    InputFieldComponent,
-    TextAreaComponent,
-    AvatarComponent,
-    HoverComponent,
-    ExpansionPanelComponent,
-    ComboBoxComponent,
-    ImageComponent,
-    AppBarComponent,
-    BreadCrumbComponent,
+    LineComponentTab,
+    SwitchComponentTab,
+    InputFieldComponentTab,
+    TextAreaComponentTab,
+    AvatarComponentTab,
+    HoverComponentTab,
+    ExpansionPanelComponentTab,
+    ComboBoxComponentTab,
+    ImageComponentTab,
+    AppBarComponentTab,
+    BreadCrumbComponentTab,
+    CheckboxComponentTab,
+    RadioButtonComponentTab,
+    RadioButtonGroupComponentTab,
+    CardComponentTab,
+    TabContainerComponentTab,
     Footers
   },
 }
