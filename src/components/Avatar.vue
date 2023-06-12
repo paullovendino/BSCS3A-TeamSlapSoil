@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar" :style="[ width: resizeOption, height: resizeOption ]">
+  <div class="avatar">
     <img :src="imageUrl" :alt="altText" class="avatar-image">
   </div>
 </template>
