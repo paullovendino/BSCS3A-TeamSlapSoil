@@ -20,10 +20,7 @@
   export default {
     name: 'AppBar',
     props: {
-      title: {
-        type: String,
-        required: true
-      },
+      title: String,
       menuItems: {
         type: Array,
         required: true
@@ -42,10 +39,11 @@
   };
   </script>
   
-  <style>
+<style>
   .app-bar {
     display: flex;
     align-items: center;
+    min-width: 200px;
     background-color: #7F5539;
     padding: 10px;
     position: relative;
@@ -105,7 +103,8 @@
   }
   
   .menu a:hover {
-    background-color: #7F5539;
-    color: white;
+    margin-left: 10px;
+    color: #3f2e1f;
+    transform: .5s ease;
   }
-  </style>
+</style>
