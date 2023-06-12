@@ -5,7 +5,7 @@
                 <h1>Image Component</h1>
             </div>
             <div class="wrapperBottom">
-                <Image/>
+                <Image :imageUrl="imageUrl" :alt="alt"/>
             </div>
         </div>
 
@@ -15,24 +15,14 @@
                 <table>
                 <tr>
                     <td>
-                        <Checkbox label="With Text" name="ShowLabel"/>
+                        <Checkbox label="Image" name="image" @isChecked="imageEnabled"/>
                     </td>
                     <td>
-                        <Checkbox label="Disabled" name="text" @isChecked="isDisabled"/>
+                        <Checkbox label="Alt" name="alt" @isChecked="altEnabled"/>
                     </td>
                 </tr>
                 </table>
             </div>
-
-            <ExpansionPanel title="Types">
-                <table class="expandTable">
-                <tr>
-                    <td><RadioButton label="Option 1" name="switchType" value=" " @valueChanged="TypeChanged" checked="true"/></td>
-                    <td><RadioButton label="Option 2" name="switchType" value=" " @valueChanged="TypeChanged"/></td>
-                </tr>
-                </table>
-            </ExpansionPanel>
-            
         </div> 
     </Template>
 </template>
@@ -55,12 +45,25 @@ import Checkbox from '/src/components/Checkbox.vue'
      },
      data (){
          return{
-            Disabled: false,
-            typeSelected: ''
+            imageUrl: '',
+            alt: '',
          }
      },
         methods: {
-
+          imageEnabled(event){
+            if(event){
+              this.imageUrl = "/src/assets/img/testingBG.jpg"
+            }else{
+              this.imageUrl = ''
+            }
+          },
+          altEnabled(event){
+            if(event){
+              this.alt = "Image"
+            }else{
+              this.alt = ''
+            }
+          }
         }
     }
 </script>
@@ -117,6 +120,7 @@ import Checkbox from '/src/components/Checkbox.vue'
     justify-content: center;
     align-items: center;
     border-radius: 30px;
+    padding: 10px;
   }
 
   .wrapperTop h1{
