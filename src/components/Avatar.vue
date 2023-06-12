@@ -1,6 +1,6 @@
 <template>
-  <div class="avatar">
-    <img :src="imageUrl" :alt="alt" class="avatar-image">
+  <div :class="[size, 'avatar']">
+    <img :src="imageUrl" :alt="alt" class='avatar-image'>
   </div>
 </template>
 
@@ -14,7 +14,8 @@ export default {
     alt: {
       type: String,
       default: 'Avatar'
-    }
+    },
+    size: String,
   }
 };
 </script>
@@ -34,4 +35,33 @@ export default {
   height: 100%;
   object-fit: cover;
 }
+
+div{
+  width: 50px
+}
+
+.xx-small{
+  width: 20px;
+}
+
+.x-small{
+  width: 30px;
+}
+
+.medium{
+  width: 80px;
+}
+
+.large{
+  width: 120px;
+}
+
+.x-large{
+  width: 160px;
+}
+
+.xx-large{
+  width: 200px;
+}
+
 </style>
