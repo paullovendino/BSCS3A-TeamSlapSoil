@@ -1,32 +1,24 @@
 <template>
   <div>
-    <input type="text" :class="[inputStyle, inputClass]" v-model="inputText" placeholder="Enter text">
+    <input type="text" :class="type" :placeholder="placeholder" :readonly="readonly" >
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    inputStyle: {
+    type: {
       type: String,
-      default: "input-field"
-    }
-  },
-  data() {
-    return {
-      inputText: '',
-    };
-  },
-  computed: {
-    inputClass() {
-      return this.inputStyle;
-    }
+      default: "input-field",
+    },
+    placeholder: '',
+    readonly: false,
   }
 };
 </script>
 
 <style>
-.input-field-light {
+input{
   background-color: #E6CCB2;
   padding: 10px;
   border: 1px solid #7F5539;
@@ -34,7 +26,7 @@ export default {
   outline: #7F5539;
 }
 
-.input-field-dark {
+.dark {
   background-color: #7F5539;
   padding: 10px;
   border: 1px solid #E6CCB2;
