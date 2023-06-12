@@ -5,7 +5,7 @@
                 <h1>Avatar Component</h1>
             </div>
             <div class="wrapperBottom">
-                <Avatar/>
+                <Avatar :imageUrl="imageUrl" :alt="alt" :size="sizeSelected"/>
             </div>
         </div>
 
@@ -15,30 +15,36 @@
                 <table>
                 <tr>
                     <td>
-                        <Checkbox label="On" name="switchLabel" @isChecked="SwitchChanged"/>
+                        <Checkbox label="Image" name="Image" @isChecked="imageEnabled"/>
                     </td>
                     <td>
-                        <Checkbox label="Disabled" name="text" @isChecked="isDisabled"/>
+                        <Checkbox label="Alt" name="alt" @isChecked="altEnabled"/>
                     </td>
                 </tr>
                 </table>
             </div>
-
-            <ExpansionPanel title="Types">
-                <table class="expandTable">
-                <tr>
-                    <td><RadioButton label="Rectangular" name="switchType" value="rectangular" @valueChanged="TypeChanged" checked="true"/></td>
-                    <td><RadioButton label="Round" name="switchType" value="round" @valueChanged="TypeChanged"/></td>
-                </tr>
-                </table>
-            </ExpansionPanel>
+            <ExpansionPanel title="Size">
+        <table class="expandTable">
+          <tr>
+            <td><RadioButton label="xx-small" name="size" value="xx-small" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="x-small" name="size" value="x-small" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="small" name="size" value="small" @valueChanged="SizeChanged" checked="true"/></td>
+            <td><RadioButton label="medium" name="size" value="medium" @valueChanged="SizeChanged"/></td>
+          </tr>
+          <tr>
+            <td><RadioButton label="large" name="size" value="large" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="x-large" name="size" value="x-large" @valueChanged="SizeChanged"/></td>
+            <td><RadioButton label="xx-large" name="size" value="xx-large" @valueChanged="SizeChanged"/></td>
+          </tr>
+        </table>
+      </ExpansionPanel>
             
         </div> 
     </Template>
 </template>
 
 <script>
-import Avatar from '/src/components/UpdatedAvatar.vue'
+import Avatar from '/src/components/Avatar.vue'
 import Template from '/src/components/Content-Template.vue'
 import RadioButton from '/src/components/RadioButton.vue'
 import ExpansionPanel from '/src/components/ExpansionPanel.vue'
@@ -55,20 +61,28 @@ import Checkbox from '/src/components/Checkbox.vue'
      },
      data (){
          return{
-            SwitchOn: false,
-            Disabled: false,
-            typeSelected: ''
+            sizeSelected: '',
+            imageUrl: '',
+            alt: ''
          }
      },
         methods: {
-            SwitchChanged(event){
-                this.SwitchOn = event
+            SizeChanged(event){
+                this.sizeSelected = event
             },
-            isDisabled(event){
-                this.Disabled = event
+            altEnabled(event){
+                if(event){
+                    this.alt = 'Image'
+                }else{
+                    this.alt = ''
+                }
             },
-            TypeChanged(event){
-                this.typeSelected = event
+            imageEnabled(event){
+                if(event){
+                    this.imageUrl = '/src/assets/img/favicon.ico'
+                }else{
+                    this.imageUrl = ''
+                }
             }
         }
     }
