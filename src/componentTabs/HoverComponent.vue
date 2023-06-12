@@ -5,7 +5,7 @@
                 <h1>Hover Component</h1>
             </div>
             <div class="wrapperBottom">
-                <Hover :disabled="Disabled" :type="HoverSelected"/>
+                <Hover :disabled="Disabled" :hovereffect="hoverEffect" :shape="shape">Sample</Hover>
             </div>
         </div>
 
@@ -21,22 +21,31 @@
                 </table>
             </div>
 
+            <ExpansionPanel title="Shape">
+                <table class="expandTable">
+                <tr>
+                    <td><RadioButton label="Rectangle" name="shape" value="rectangle" @valueChanged="shapeChanged" checked="true"/></td>
+                    <td><RadioButton label="Round" name="shape" value="round" @valueChanged="shapeChanged"/></td>
+                </tr>
+                </table>
+            </ExpansionPanel>
+
             <ExpansionPanel title="Types">
                 <table class="expandTable">
                 <tr>
-                    <td><RadioButton label="Background" name="switchEffect" value="ChangeBackgroundColor" @valueChanged="HoverChanged"/></td>
-                    <td><RadioButton label="Underlined" name="switchEffect" value="Underlined" @valueChanged="HoverChanged" checked="true"/></td>
-                    <td><RadioButton label="Text Color" name="switchEffect" value="ChangeTextColor" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Default" name="hoverEffect" value="default" @valueChanged="HoverChanged" checked="true"/></td>
+                    <td><RadioButton label="Underlined" name="hoverEffect" value="underlined" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Text Color" name="hoverEffect" value="text-color" @valueChanged="HoverChanged"/></td>
                 </tr>
                 <tr>
-                    <td><RadioButton label="Zoom In" name="switchEffect" value="ZoomIn" @valueChanged="HoverChanged"/></td>
-                    <td><RadioButton label="Zoom Out" name="switchEffect" value="ZoomOut" @valueChanged="HoverChanged"/></td>
-                    <td><RadioButton label="Text Zoom" name="switchEffect" value="TextZoom" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Zoom In" name="hoverEffect" value="zoom-in" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Zoom Out" name="hoverEffect" value="zoom-out" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Border" name="hoverEffect" value="border" @valueChanged="HoverChanged"/></td>
                 </tr>
                 <tr>
-                    <td><RadioButton label="Right Tilt" name="switchEffect" value="RightTilt" @valueChanged="HoverChanged"/></td>
-                    <td><RadioButton label="Left Tilt" name="switchEffect" value="LeftTilt" @valueChanged="HoverChanged"/></td>
-                    <td><RadioButton label="Border" name="switchEffect" value="BorderLine" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Right Tilt" name="hoverEffect" value="right-tilt" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Left Tilt" name="hoverEffect" value="left-tilt" @valueChanged="HoverChanged"/></td>
+                    <td><RadioButton label="Shadow" name="hoverEffect" value="shadow" @valueChanged="HoverChanged"/></td>
                 </tr>
                 </table>
             </ExpansionPanel>
@@ -64,7 +73,8 @@ import Checkbox from '/src/components/Checkbox.vue'
      data (){
          return{
             Disabled: false,
-            HoverSelected: ''
+            hoverEffect: '',
+            shape: '',
          }
      },
         methods: {
@@ -72,7 +82,10 @@ import Checkbox from '/src/components/Checkbox.vue'
                 this.Disabled = event
             },
             HoverChanged(event){
-                this.HoverSelected = event
+                this.hoverEffect = event
+            },
+            shapeChanged(event){
+                this.shape = event
             }
         }
     }
