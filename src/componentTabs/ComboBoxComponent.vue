@@ -5,7 +5,7 @@
                 <h1>ComboBox Component</h1>
             </div>
             <div class="wrapperBottom">
-                <ComboBox/>
+                <ComboBox :options="options" :disabled="disabled"/>
             </div>
         </div>
 
@@ -15,33 +15,18 @@
                 <table>
                 <tr>
                     <td>
-                        <Checkbox label="With Text" name="ShowLabel"/>
-                    </td>
-                    <td>
                         <Checkbox label="Disabled" name="text" @isChecked="isDisabled"/>
                     </td>
                 </tr>
                 </table>
             </div>
-
-            <ExpansionPanel title="Types">
-                <table class="expandTable">
-                <tr>
-                    <td><RadioButton label="Option 1" name="switchType" value=" " @valueChanged="TypeChanged" checked="true"/></td>
-                    <td><RadioButton label="Option 2" name="switchType" value=" " @valueChanged="TypeChanged"/></td>
-                </tr>
-                </table>
-            </ExpansionPanel>
-            
         </div> 
     </Template>
 </template>
 
 <script>
 import Template from '/src/components/Content-Template.vue'
-import RadioButton from '/src/components/RadioButton.vue'
 import ComboBox from '/src/components/ComboBox.vue'
-import ExpansionPanel from '/src/components/ExpansionPanel.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 
     export default{
@@ -49,19 +34,24 @@ import Checkbox from '/src/components/Checkbox.vue'
      components: {
          ComboBox,
          Template,
-         RadioButton,
-         ExpansionPanel,
          Checkbox
      },
      data (){
          return{
-            Disabled: false,
-            typeSelected: ''
+          options: [
+            { value: 'Item 1', label: 'Item 1' },
+            { value: 'Item 2', label: 'Item 2' },
+            { value: 'Item 3', label: 'Item 3' },
+            { value: 'Item 4', label: 'Item 4' }
+          ],
+          disabled: false,
          }
      },
-        methods: {
-
+      methods: {
+        isDisabled(event){
+          this.disabled = event
         }
+      }
     }
 </script>
 
