@@ -83,39 +83,37 @@
     .contentChecked{
         margin-left: 250px;
     }
-    
     .checkedIconCancel{
         left: 180px !important;
     }
-    
+
     .sidebar::-webkit-scrollbar{
-        width: 5px;
+        width: 10px;
     }
 
     .sidebar::-webkit-scrollbar-thumb{
-        background-color: #b08968;
+        background-color: #FBBA72;
     }
 
     .sidebar::-webkit-scrollbar-track{
-        background-color: #b08968;
+        background-color: #8F250C;
     }
-    
     .navbar{
         display: flex;
-        background: #b08968;
+        background: #8F250C;
         width: 100%;
-        height: 75px;
+        height: 80px;
         align-items: center;
         justify-content: space-between;
     }
-    
     .sidebar{
         position: fixed;
         width: 250px;
-        height: 90%;
-        background: #ede0d4;
+        height: 100%;
+        background: #8F250C;
         overflow-y: scroll;
         transition: all .5s ease;
+        padding-bottom: 100px;
     }
 
     .sidebar ul{
@@ -129,12 +127,12 @@
         width: 100%;
         padding-top: 30px;
         padding-bottom: 20px;
-        margin-left: 0px;
+        margin-left: 10px;
         font-size: 15px;
-        color: black;
+        color: white;
         box-sizing: border-box;
         border-top: 1px solid rgba(255, 255, 255, .1);
-        /* border-bottom: 1px solid black; */
+        border-bottom: 1px solid black;
         transition: .1s ease;
     }
 
@@ -144,14 +142,13 @@
 
     ul li:hover{
         padding-left: 15px;
-        color: #7F5539;
-        cursor: pointer;
+        color: #FBBA72;
     }
 
     ul li.active{
         padding-left: 15px;
-        background: #ede0d4;
-        color: #7F5539;
+        background: #551102;
+        color: #FBBA72;
     }
 
     .sidebar header{
@@ -159,17 +156,16 @@
         color: white;
         text-align: center;
         line-height: 70px;
-        background: #b08968;
+        background: #8F250C;
         user-select: none;
     }
 
     .webTitle h3{
-        color: white;
+        color: #FBBA72;
         margin-right: 90px;
         font-size: 40px;
         font-weight: 700;
     }
-    
     .menu-button {
         cursor: pointer;
         background: none;
@@ -187,15 +183,14 @@
     }
 
     .menu-button h2{
-        color: white;
+        color: #FBBA72;
         font-weight: 800;
     }
     
     .line {
         width: 100%;
         height: 4px;
-        background-color: white;
-        border-radius: 10px;
+        background-color: #FBBA72;
     }
 
     #check{
@@ -205,14 +200,14 @@
     #show, #cancel{
         position: absolute;
         cursor: pointer;
-        background: #b08968;
+        background: #8F250C;
         border-radius: 3px;
     }
 
     #show{
         top: 25px;
         font-size: 35px;
-        color: #ede0d4;
+        color: #FBBA72;
         padding: 6px 12px;
         transition: all .4s;
     }
@@ -221,7 +216,7 @@
         z-index: 1000;
         left: -180px;
         top: 17px;
-        color: #ede0d4;
+        color: #FBBA72;
         padding: 4px 9px;
         transition: all .5s ease;
     }
