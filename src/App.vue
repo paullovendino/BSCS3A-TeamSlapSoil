@@ -4,56 +4,52 @@
         <Greetings />
     </Tabs>
 
-    <Tabs title="Button Component">
-      <ButtonComponentTab/>
-    </Tabs>
-    
-    <Tabs title="Line/Divider Component">
-      <LineComponentTab/>
-    </Tabs>
-
-    <Tabs title="Switch Component">
-      <SwitchComponentTab/>
-    </Tabs>
-
-    <Tabs title="Input Field Component">
-      <InputFieldComponentTab/>
-    </Tabs>
-
-    <Tabs title="Text Area Component">
-      <TextAreaComponentTab/>
+    <Tabs title="AppBar Component">
+      <AppBarComponentTab/>
     </Tabs>
 
     <Tabs title="Avatar Component">
       <AvatarComponentTab/>
     </Tabs>
 
-    <Tabs title="Hover Component">
-      <HoverComponentTab/>
+    <Tabs title="BreadCrumb Component">
+      <BreadCrumbComponentTab/>
     </Tabs>
 
-    <Tabs title="Expansion Panel Component">
-      <ExpansionPanelComponentTab />
+    <Tabs title="Button Component">
+      <ButtonComponentTab/>
+    </Tabs>
+
+    <Tabs title="Card Component">
+      <CardComponentTab/>
+    </Tabs>
+
+    <Tabs title="Checkbox Component">
+      <CheckboxComponentTab/>
     </Tabs>
 
     <Tabs title="ComboBox Component">
       <ComboBoxComponentTab/>
     </Tabs>
 
+    <Tabs title="Expansion Panel Component">
+      <ExpansionPanelComponentTab />
+    </Tabs>
+
+    <Tabs title="Hover Component">
+      <HoverComponentTab/>
+    </Tabs>
+
     <Tabs title="Image Component">
       <ImageComponentTab/>
     </Tabs>
 
-    <Tabs title="AppBar Component">
-      <AppBarComponentTab/>
+    <Tabs title="Input Field Component">
+      <InputFieldComponentTab/>
     </Tabs>
-
-    <Tabs title="BreadCrumb Component">
-      <BreadCrumbComponentTab/>
-    </Tabs>
-
-    <Tabs title="Checkbox Component">
-      <CheckboxComponentTab/>
+    
+    <Tabs title="Line/Divider Component">
+      <LineComponentTab/>
     </Tabs>
 
     <Tabs title="Radiobutton Component">
@@ -64,12 +60,16 @@
       <RadioButtonGroupComponentTab/>
     </Tabs>
 
-    <Tabs title="Card Component">
-      <CardComponentTab/>
+    <Tabs title="Switch Component">
+      <SwitchComponentTab/>
     </Tabs>
 
     <Tabs title="Tabs Component">
       <TabContainerComponentTab/>
+    </Tabs>
+
+    <Tabs title="Text Area Component">
+      <TextAreaComponentTab/>
     </Tabs>
 
   </TabbedNavigation>
