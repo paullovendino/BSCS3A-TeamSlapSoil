@@ -1,6 +1,6 @@
 <template>
   <div class="avatar">
-    <img :src="imageUrl" :alt="altText" class="avatar-image">
+    <img :src="imageUrl" :alt="alt" class="avatar-image">
   </div>
 </template>
 
@@ -11,13 +11,9 @@ export default {
       type: String,
       required: true
     },
-    altText: {
+    alt: {
       type: String,
       default: 'Avatar'
-    },
-    resizeOption: {
-      type: String,
-      default: '100px' // default resize option value
     }
   }
 };
