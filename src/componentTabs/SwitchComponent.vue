@@ -40,7 +40,7 @@
 <script>
 import Template from '/src/components/Content-Template.vue'
 import RadioButton from '/src/components/RadioButton.vue'
-import Switch from '/src/components/MySwitchFinal.vue'
+import Switch from '/src/components/Switch.vue'
 import ExpansionPanel from '/src/components/ExpansionPanel.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 
