@@ -1,5 +1,5 @@
 <template>
-  <div class="combo-box">
+  <div class="combo-box" :disabled="disabled">
     <select v-model="selectedOption" class="select-box">
       <option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option>
     </select>
