@@ -5,7 +5,7 @@
                 <h1>Text Area Component</h1>
             </div>
             <div class="wrapperBottom">
-                <TextArea :type="typeSelected" :disabled="Disabled"/>
+                <TextArea :type="typeSelected" :disabled="Disabled" :placeholder="placeholder" :readonly="readOnly"/>
             </div>
         </div>
 
@@ -15,7 +15,13 @@
                 <table>
                 <tr>
                     <td>
-                        <Checkbox label="Read-Only" name="text" @isChecked="isDisabled"/>
+                        <Checkbox label="Placeholder" name="placeholder" @isChecked="placeholderEnabled"/>
+                    </td>
+                    <td>
+                        <Checkbox label="Disabled" name="disabled" @isChecked="isDisabled"/>
+                    </td>
+                    <td>
+                        <Checkbox label="Read-Only" name="readonly" @isChecked="readOnlyEnabled"/>
                     </td>
                 </tr>
                 </table>
@@ -40,9 +46,10 @@ import RadioButton from '/src/components/RadioButton.vue'
 import ExpansionPanel from '/src/components/ExpansionPanel.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 import TextArea from '/src/components/TextArea.vue'
+import { readonly } from 'vue'
 
     export default{
-     name: 'SwitchComponent',
+     name: 'TextAreaComponent',
      components: {
          TextArea,
          Template,
@@ -53,7 +60,9 @@ import TextArea from '/src/components/TextArea.vue'
      data (){
          return{
             Disabled: false,
-            typeSelected: ''
+            typeSelected: '',
+            placeholder: '',
+            readOnly: false
          }
      },
         methods: {
@@ -62,7 +71,17 @@ import TextArea from '/src/components/TextArea.vue'
             },
             TypeChanged(event){
                 this.typeSelected = event
-            }
+            },
+            placeholderEnabled(event){
+              if(event){
+                  this.placeholder = 'Type your text here'
+              }else{
+                  this.placeholder = ''
+              }
+            },
+            readOnlyEnabled(event){
+              this.readOnly = event
+            },
         }
     }
 </script>
