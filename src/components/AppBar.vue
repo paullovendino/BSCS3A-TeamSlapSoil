@@ -39,7 +39,7 @@
   };
   </script>
   
-<style>
+<style scoped>
   .app-bar {
     display: flex;
     align-items: center;
@@ -79,14 +79,18 @@
   
   .menu {
     display: none;
-    list-style: none;
     position: absolute;
     top: calc(100% + 0px);
     left: 0;
     background-color: #E6CCB2;
     padding: 10px;
     margin: 0;
-    width: 200px;
+    min-width: 200px;
+  }
+
+  ul{
+    display: block;
+    list-style: none;
   }
   
   .menu.open {
