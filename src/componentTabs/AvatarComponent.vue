@@ -51,7 +51,7 @@ import ExpansionPanel from '/src/components/ExpansionPanel.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 
     export default{
-     name: 'SwitchComponent',
+     name: 'AvatarComponent',
      components: {
          Avatar,
          Template,
