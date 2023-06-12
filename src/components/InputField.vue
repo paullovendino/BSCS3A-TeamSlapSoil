@@ -1,76 +1,38 @@
 <template>
-  <div>
-    <input type="text" :class="type" :placeholder="placeholder" :readonly="readonly" >
+  <div class="input">
+    <input :class="['inputField', type]" type="text" placeholder="Enter text" :disabled="disabled">
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    type: {
-      type: String,
-      default: "input-field",
-    },
-    placeholder: '',
-    readonly: false,
+        name: 'InputField',
+        props: {
+            disabled: false,
+            type: String
+        }
   }
-};
+
+
 </script>
 
 <style>
-input{
-  background-color: #E6CCB2;
-  padding: 10px;
-  border: 1px solid #7F5539;
-  border-radius: 4px;
-  outline: #7F5539;
-}
+    .inputField{
+        height: 30px;
+        border: solid 3px #b08968;
+        padding-left: 8px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        transition: .5s;
+    }
+    .inputRound{
+        border-radius: 20px;
+    }
+    input:disabled,
+    input[disabled]{
+        background-color: rgb(216, 216, 216);
+        border: solid 3px gray;
+    }
 
-.dark {
-  background-color: #7F5539;
-  padding: 10px;
-  border: 1px solid #E6CCB2;
-  border-radius: 4px;
-  outline: #E6CCB2;
-  color: white;
-}
 
-.underlined-light {
-  border: none;
-  border-bottom: 1px solid #E6CCB2;
-  outline: none;
-}
-
-.underlined-dark {
-  border: none;
-  border-bottom: 1px solid #7F5539;
-  outline: none;
-}
-
-.outlined-light {
-  outline: 1px solid #E6CCB2;
-}
-
-.outlined-dark {
-  outline: 1px solid #7F5539;
-}
-
-.solo {
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-.solo-filled {
-  background-color: #E6CCB2;
-  border: none;
-  outline: none;
-}
-
-.solo-inverted {
-  background-color: #7F5539;
-  color: #E6CCB2;
-  border: none;
-  outline: none;
-}
 </style>
