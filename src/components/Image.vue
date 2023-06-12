@@ -1,7 +1,7 @@
 <template>
   <div class="image-component-wrapper">
     <div class="image-wrapper">
-        <img :src="imageUrl" :alt="altText" />
+        <img src="https://media.istockphoto.com/id/1096052566/vector/stamprsimp2red.jpg?s=612x612&w=0&k=20&c=KVu0nVz7ZLbZsRsx81VBZcuXZ1MlEmLk9IQabO2GkYo=" :alt="altText" />
     </div>
   </div>
 </template>
