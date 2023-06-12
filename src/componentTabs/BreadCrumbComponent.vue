@@ -5,7 +5,7 @@
                 <h1>BreadCrumb Component</h1>
             </div>
             <div class="wrapperBottom">
-                <BreadCrumb/>
+                <BreadCrumb :items="items" :type="type"/>
             </div>
         </div>
 
@@ -15,10 +15,7 @@
                 <table>
                 <tr>
                     <td>
-                        <Checkbox label="With Text" name="ShowLabel"/>
-                    </td>
-                    <td>
-                        <Checkbox label="Disabled" name="text" @isChecked="isDisabled"/>
+                        <Checkbox label="Items" name="items" @isChecked="itemsEnabled"/>
                     </td>
                 </tr>
                 </table>
@@ -27,8 +24,8 @@
             <ExpansionPanel title="Types">
                 <table class="expandTable">
                 <tr>
-                    <td><RadioButton label="Option 1" name="switchType" value=" " @valueChanged="TypeChanged" checked="true"/></td>
-                    <td><RadioButton label="Option 2" name="switchType" value=" " @valueChanged="TypeChanged"/></td>
+                    <td><RadioButton label="Default" name="type" value="default" @valueChanged="TypeChanged" checked="true"/></td>
+                    <td><RadioButton label="Background" name="type" value="background" @valueChanged="TypeChanged"/></td>
                 </tr>
                 </table>
             </ExpansionPanel>
@@ -39,28 +36,45 @@
 
 <script>
 import Template from '/src/components/Content-Template.vue'
-import RadioButton from '/src/components/RadioButton.vue'
-import ExpansionPanel from '/src/components/ExpansionPanel.vue'
 import Checkbox from '/src/components/Checkbox.vue'
 import BreadCrumb from '/src/components/breadcrumb.vue'
+import ExpansionPanel from '/src/components/ExpansionPanel.vue'
+import RadioButton from '/src/components/RadioButton.vue'
 
     export default{
      name: 'SwitchComponent',
      components: {
          BreadCrumb,
          Template,
-         RadioButton,
+         Checkbox,
          ExpansionPanel,
-         Checkbox
+         RadioButton
      },
      data (){
          return{
-            Disabled: false,
-            typeSelected: ''
+          items: [
+            {label: "", url: "#"},
+          ],
+          type: '',
          }
      },
         methods: {
-
+          itemsEnabled(event){
+            if(event){
+              this.items = [
+                  {label: "Item 1", url: "#"},
+                  {label: "Item 2", url: "#"},
+                  {label: "Item 3", url: "#"},
+              ]
+            }else{
+              this.items =  [
+                  {label: "", url: "#"}
+                ]
+            }
+          },
+          TypeChanged(event){
+            this.type = event
+          }
         }
     }
 </script>
