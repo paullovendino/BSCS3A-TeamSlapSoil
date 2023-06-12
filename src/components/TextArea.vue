@@ -1,6 +1,6 @@
 <template>
   <div class="text-area">
-    <textarea v-model="text" :class="['textarea', type]" :disabled="disabled"></textarea>
+    <textarea :class="['textarea', type]" :disabled="disabled" :placeholder="placeholder" :readonly="readonly"></textarea>
   </div>
 </template>
 
@@ -9,12 +9,9 @@ export default {
     name: "TextArea",
     props: {
         disabled: false,
-        type: String
-    },
-    data() {
-      return {
-        text: 'This is a Text Area'
-      }
+        type: String,
+        placeholder: String,
+        readonly: false
     }
 }
 </script>
@@ -27,14 +24,14 @@ export default {
     .textarea {
         width: 300px;
         height: 200px;
-        padding: 8px;
-        border: 2px solid #b08968;
+        padding: 20px;
+        border: 2px solid #7F5539;
         border-radius: 4px;
         resize: vertical;
-        background-color: white;
+        background-color: #f9e7d8;
         color: black;
         font-family: 'Quicksand', sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         box-shadow: 2px 2px 200px rgba(0, 0, 0, 0.1);
         transition: border-color 0.3s ease-in-out;
         margin-top: 10px;
@@ -49,7 +46,7 @@ export default {
     }
 
     .textarea::placeholder {
-        color: #ccc;
+        color: #bf9b85;
     }
 
     .textarea::-webkit-scrollbar {
@@ -65,8 +62,10 @@ export default {
         background-color: #7F5539;
     }
     textarea:disabled,
+    textarea:disabled ~ textarea::placeholder,
     textarea[disabled]{
-        background-color: rgb(216, 216, 216);
-        border: solid 3px gray;
+        background-color: #c1a595;
+        border: solid 3px #ad8d79;
+        color: #c1a595,
     }
 </style>
