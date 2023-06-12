@@ -1,6 +1,6 @@
 <template>
     <nav class="breadcrumb">
-      <ul>
+      <ul :class="type">
         <li v-for="(item, index) in items" :key="index">
           <a :href="item.url" :class="{ 'active': index === items.length - 1 }">{{ item.label }}</a>
           <span v-if="index !== items.length - 1" class="divider">/</span>
@@ -12,7 +12,11 @@
   <script>
   export default {
     props: {
-      items: [],
+      items: {
+        type: Array,
+        required: true
+      },
+      type: String,
     }
   };
   </script>
@@ -27,6 +31,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding: 15px;
   }
   
   li {
@@ -36,17 +41,33 @@
   
   a {
     text-decoration: none;
-    color: #ffe1a8;
+    color: #dba981;
   }
   
   a.active {
-    color: #f08080;
+    color: #7F5539;
     font-weight: bold;
   }
   
   .divider {
     margin: 0 5px;
-    color: #ffea00;
+    color: #593b27;
+  }
+
+  .background{
+    background: #7F5539;
+  }
+
+  .background a{
+    color: #af8665;
+  }
+
+  .background a.active{
+    color: #f6e4d5;
+  }
+
+  .background .divider{
+    color: #ecb274;
   }
   </style>
   
