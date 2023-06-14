@@ -19,7 +19,7 @@
         background-color: #7F5539;
     }
 
-    .horizontal{
+    .vertical{
         background-color: #7F5539;
         height: 100%;
         width: 1px;
